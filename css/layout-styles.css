@@ -1,0 +1,129 @@
+/*The styles in this sheet only control the overall layout of the page. Column width is based on 1/16 of parent element size*/
+/*Layout Styles*/
+/* line 4, ../scss/layout-styles.scss */
+.row {
+  width: 100%;
+  clear: both;
+  overflow: auto;
+}
+
+/* line 12, ../scss/layout-styles.scss */
+.col-1, .col-2, .col-3, .col-4, .col-5,
+.col-6, .col-7, .col-8, .col-9, .col-10,
+.col-11, .col-12, .col-13, .col-14, .col-15 {
+  margin: 0;
+  float: left;
+}
+/* line 15, ../scss/layout-styles.scss */
+.col-1 img, .col-2 img, .col-3 img, .col-4 img, .col-5 img,
+.col-6 img, .col-7 img, .col-8 img, .col-9 img, .col-10 img,
+.col-11 img, .col-12 img, .col-13 img, .col-14 img, .col-15 img {
+  width: 100%;
+}
+
+/* line 20, ../scss/layout-styles.scss */
+.col-1 {
+  width: 6.25%;
+}
+
+/* line 24, ../scss/layout-styles.scss */
+.col-2 {
+  width: 12.5%;
+}
+
+/* line 28, ../scss/layout-styles.scss */
+.col-3 {
+  width: 18.75%;
+}
+
+/* line 32, ../scss/layout-styles.scss */
+.col-4 {
+  width: 25%;
+}
+
+/* line 36, ../scss/layout-styles.scss */
+.col-5 {
+  width: 31.25%;
+}
+
+/* line 40, ../scss/layout-styles.scss */
+.col-6 {
+  width: 37.5%;
+}
+
+/* line 44, ../scss/layout-styles.scss */
+.col-7 {
+  width: 43.75%;
+}
+
+/* line 48, ../scss/layout-styles.scss */
+.col-8 {
+  width: 50%;
+}
+
+/* line 52, ../scss/layout-styles.scss */
+.col-9 {
+  width: 56.25%;
+}
+
+/* line 56, ../scss/layout-styles.scss */
+.col-10 {
+  width: 62.5%;
+}
+
+/* line 60, ../scss/layout-styles.scss */
+.col-11 {
+  width: 68.75%;
+}
+
+/* line 64, ../scss/layout-styles.scss */
+.col-12 {
+  width: 75%;
+}
+
+/* line 68, ../scss/layout-styles.scss */
+.col-13 {
+  width: 81.25%;
+}
+
+/* line 72, ../scss/layout-styles.scss */
+.col-14 {
+  width: 87.5%;
+}
+
+/* line 76, ../scss/layout-styles.scss */
+.col-15 {
+  width: 93.75%;
+}
+
+/*
+.one-eigth-col, .quarter-col, .half-col,
+.three-quarter-col, .one-third-col, two-thirds-col {
+	margin: 0 1%;
+	float: left;
+}
+
+.one-eighth-col {
+	width: 10.5%;
+}
+
+.quarter-col {
+	width: 23%;
+}
+
+.half-col {
+	width: 48%;
+}
+
+.three-quarter-col {
+	width: 73%;
+}
+
+.one-third-col {
+	width: 31.3%;
+}
+
+.two-thirds-col {
+	width: 64%;
+}
+*/

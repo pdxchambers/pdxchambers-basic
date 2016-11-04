@@ -1,0 +1,320 @@
+/*NOTE: The Site navigation styling is controlled in nav-menu.css*/
+/*SCSS COLOR VARIABLES*/
+/*BASE STYLES*/
+/* line 17, ../scss/pdxc-basic-styles.scss */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: white;
+  color: black;
+}
+
+/* line 25, ../scss/pdxc-basic-styles.scss */
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 31, ../scss/pdxc-basic-styles.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 35, ../scss/pdxc-basic-styles.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+/* line 39, ../scss/pdxc-basic-styles.scss */
+pre, code {
+  word-wrap: break-word;
+}
+
+/*SITE LAYOUT CLASSES*/
+/* line 43, ../scss/pdxc-basic-styles.scss */
+#site-header, #site-content, #post-wrapper #site-sidebar, #site-footer {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* line 48, ../scss/pdxc-basic-styles.scss */
+#post-wrapper, #site-sidebar {
+  float: left;
+}
+
+/* line 52, ../scss/pdxc-basic-styles.scss */
+#site-container {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* line 58, ../scss/pdxc-basic-styles.scss */
+#site-header, #site-footer {
+  max-width: 100%;
+  clear: both;
+}
+
+/* line 63, ../scss/pdxc-basic-styles.scss */
+#site-header {
+  background: white;
+}
+
+/* line 67, ../scss/pdxc-basic-styles.scss */
+#site-footer {
+  background: white;
+}
+
+/* line 71, ../scss/pdxc-basic-styles.scss */
+#site-content {
+  width: 100%;
+}
+
+/* line 75, ../scss/pdxc-basic-styles.scss */
+#post-wrapper {
+  width: 73%;
+  padding: 0 1%;
+}
+
+/* line 80, ../scss/pdxc-basic-styles.scss */
+#site-sidebar {
+  width: 22%;
+  margin-right: 1%;
+  padding: 0 1%;
+}
+
+/* line 86, ../scss/pdxc-basic-styles.scss */
+#site-footer {
+  /*Placeholder for styling specific to the site footer*/
+}
+
+/*HEADER STYLING*/
+/* line 91, ../scss/pdxc-basic-styles.scss */
+#site-title, #site-description {
+  text-align: center;
+}
+
+/* line 95, ../scss/pdxc-basic-styles.scss */
+#title-bg {
+  background: rgba(180, 180, 180, 0.75);
+}
+
+/* line 99, ../scss/pdxc-basic-styles.scss */
+#site-title {
+  font-size: 3rem;
+}
+/* line 101, ../scss/pdxc-basic-styles.scss */
+#site-title a {
+  color: black;
+}
+
+/* line 106, ../scss/pdxc-basic-styles.scss */
+#site-description {
+  font-size: 2rem;
+  color: black;
+}
+
+/* line 111, ../scss/pdxc-basic-styles.scss */
+#header-image {
+  width: 100%;
+}
+
+/*POST LAYOUT STYLES*/
+/* line 120, ../scss/pdxc-basic-styles.scss */
+.post-content {
+  overflow: auto;
+}
+
+/* line 124, ../scss/pdxc-basic-styles.scss */
+.byline, .post-meta {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+/* line 129, ../scss/pdxc-basic-styles.scss */
+.post-categories, .author {
+  float: left;
+}
+
+/* line 133, ../scss/pdxc-basic-styles.scss */
+.post-date, .post-tags {
+  float: right;
+}
+
+/*SITE COMMENT STYLES*/
+/* line 138, ../scss/pdxc-basic-styles.scss */
+.comment-list, .children {
+  list-style-type: none;
+}
+
+/* line 142, ../scss/pdxc-basic-styles.scss */
+.comment-list > li, .children > li {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: thin solid black;
+}
+
+/* line 149, ../scss/pdxc-basic-styles.scss */
+.bypostauthor {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 153, ../scss/pdxc-basic-styles.scss */
+.children {
+  margin: 1rem;
+  padding: 0;
+}
+
+/* line 158, ../scss/pdxc-basic-styles.scss */
+.comment-list li.odd {
+  background: #cccccc;
+}
+
+/* line 162, ../scss/pdxc-basic-styles.scss */
+.comment-list li.even {
+  background: white;
+}
+
+/*WORDPRESS GENERATED CLASSES*/
+/* line 169, ../scss/pdxc-basic-styles.scss */
+.sticky {
+  border: thin solid black;
+  padding: 1rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 180, ../scss/pdxc-basic-styles.scss */
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail,
+.wp-post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 185, ../scss/pdxc-basic-styles.scss */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 190, ../scss/pdxc-basic-styles.scss */
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+/* line 195, ../scss/pdxc-basic-styles.scss */
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 200, ../scss/pdxc-basic-styles.scss */
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 205, ../scss/pdxc-basic-styles.scss */
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 210, ../scss/pdxc-basic-styles.scss */
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 214, ../scss/pdxc-basic-styles.scss */
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 219, ../scss/pdxc-basic-styles.scss */
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 225, ../scss/pdxc-basic-styles.scss */
+.wp-caption, .gallery-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+/* line 233, ../scss/pdxc-basic-styles.scss */
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 237, ../scss/pdxc-basic-styles.scss */
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 241, ../scss/pdxc-basic-styles.scss */
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+/* line 245, ../scss/pdxc-basic-styles.scss */
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+/* line 254, ../scss/pdxc-basic-styles.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+/* line 262, ../scss/pdxc-basic-styles.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* line 270, ../scss/pdxc-basic-styles.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}

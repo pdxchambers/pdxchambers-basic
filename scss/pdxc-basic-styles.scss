@@ -1,0 +1,288 @@
+/*NOTE: The Site navigation styling is controlled in nav-menu.css*/
+
+/*SCSS COLOR VARIABLES*/
+$body-bg: #fff;
+$body-text: #000;
+$site-header-bg: #fff;
+$title-bg: rgba(180, 180, 180, .75);
+$site-title: #000;
+$site-description: #000;
+$site-footer-bg: #fff;
+$h-elements: #000;
+$border-color: #000;
+$odd-comment-bg: #ccc;
+$even-comment-bg: #fff;
+
+/*BASE STYLES*/
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background: $body-bg;
+	color: $body-text;
+}
+header {
+	a {
+		text-decoration: none;
+		color: $h-elements;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $h-elements;
+}
+
+pre, code {
+	word-wrap: break-word;
+}
+/*SITE LAYOUT CLASSES*/
+#site-header, #site-content, #post-wrapper #site-sidebar, #site-footer {
+	margin: 0;
+	padding: 1rem;
+}
+
+#post-wrapper, #site-sidebar {
+	float: left;
+}
+
+#site-container {
+	width: 1024px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+#site-header, #site-footer{
+	max-width: 100%;
+	clear: both;
+}
+
+#site-header {
+	background: $site-header-bg;
+}
+
+#site-footer {
+	background: $site-footer-bg;
+}
+
+#site-content{
+	width: 100%;
+}
+
+#post-wrapper {
+	width: 73%;
+	padding:0 1%;
+}
+
+#site-sidebar {
+	width: 22%;
+	margin-right: 1%;
+	padding: 0 1%;
+}
+
+#site-footer {
+	/*Placeholder for styling specific to the site footer*/
+}
+
+/*HEADER STYLING*/
+#site-title, #site-description {
+	text-align: center;
+}
+
+#title-bg {
+	background: $title-bg;
+}
+
+#site-title {
+	font-size: 3rem;
+	a {
+		color: $site-title;
+	}
+}
+
+#site-description {
+	font-size: 2rem;
+	color: $site-description;
+}
+
+#header-image{
+	width: 100%;
+}
+
+/*POST LAYOUT STYLES*/
+.post-header {
+	
+}
+
+.post-content {
+	overflow: auto;
+}
+
+.byline, .post-meta {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.post-categories, .author {
+	float: left;
+}
+
+.post-date, .post-tags {
+	float: right;
+}
+
+/*SITE COMMENT STYLES*/
+.comment-list, .children  {
+	list-style-type: none;
+}
+
+.comment-list > li, .children > li {
+		margin: 1rem 0;
+		padding: 1rem;
+		border: thin solid $border-color;
+}
+
+
+.bypostauthor {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.children {
+	margin: 1rem;
+	padding: 0;
+}
+
+.comment-list li.odd {
+	background: $odd-comment-bg;
+}
+	
+.comment-list li.even {
+	background: $even-comment-bg;
+}
+
+
+
+/*WORDPRESS GENERATED CLASSES*/
+.sticky {
+	border: thin solid $border-color;
+	padding: 1rem;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail,
+.wp-post-image {
+	max-width: 100%;
+	height: auto;
+}
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption, .gallery-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}

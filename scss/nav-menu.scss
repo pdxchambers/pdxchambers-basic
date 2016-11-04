@@ -1,0 +1,115 @@
+/*SCSS VARIABLES*/
+$site-nav-bg: #000;
+$site-nav-link: #fff;
+$site-nav-hover: #f00;
+$site-nav-hover-link: #fff; 
+$site-nav-current-item: #f00;
+$site-nav-current-link: #fff;
+$sub-menu-bg: #fff;
+$sub-menu-link: #000;
+$sub-menu-hover: #ccc;
+$sub-menu-hover-link: #000;
+
+
+/*NAVIGTION MENU STYLING*/
+
+/*TOP LEVEL MENU STYLING*/
+#site-nav {
+	width: 100%;
+	background: $site-nav-bg;
+	overflow: hidden;
+}
+#site-nav ul {
+	margin: 0;
+   	padding: 0;
+   	list-style-type: none;
+}
+
+ li.menu-item {
+    float: left;
+ }
+ 
+ #site-nav > ul > li.menu-item:hover {
+ 	background: $site-nav-current-item;
+ }
+ 
+ #site-nav ul > li.menu-item:last-child {
+   float: right;
+ }
+ 
+ /*SUBMENU STYLING*/
+ ul.sub-menu {
+   position: absolute;
+   display: none;
+   float: left;
+   background: $sub-menu-bg;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+   z-index: 999;
+ }
+ ul.sub-menu > li.menu-item-has-children {
+ 	postition: relative;
+ }
+ ul.sub-menu > li.menu-item-has-children > ul {
+ 	position: absolute;
+ 	top: 15px;
+ 	left: 100%;
+ }
+ 
+ ul.sub-menu > li.menu-item a {
+ 	color: $sub-menu-link;
+ }
+ 
+  li.menu-item-has-children:hover {
+    background: $sub-menu-hover;
+  }
+  
+ ul.sub-menu > li.menu-item-has-children:hover > a{
+    color: $sub-menu-hover-link;
+  }
+ 
+ li.menu-item-has-children:hover > ul.sub-menu {
+   display: block;
+ }
+ 
+ ul.sub-menu li.menu-item {
+   display: block;
+   float: none;
+ }
+ 
+ .menu-item a {
+   display: inline-block;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   color: $site-nav-link;
+ }
+
+.menu-item-has-children a {
+	padding: 14px 16px 5px 16px;
+}
+
+ul > li.menu-item-has-children span.down-triangle {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid $site-nav-link;
+	margin: 0 auto;
+	display: block;
+}
+
+ul.sub-menu li.menu-item-has-children span.down-triangle {
+	border-top: 5px solid $sub-menu-link;
+}
+
+
+.current_menu_item {
+  background-color: $site-nav-current-item;
+}
+
+.current_menu_item a:link,
+.current_menu_item a:hover,
+.current_menu_item a:visited,
+.current_menu_item a:focus {
+  color: $site-nav-current-link;
+}
