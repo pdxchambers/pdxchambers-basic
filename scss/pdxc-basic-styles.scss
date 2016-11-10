@@ -50,7 +50,6 @@ pre, code {
 }
 
 #site-container {
-	width: 1024px;
 	margin: 0 auto;
 	padding: 1rem;
 }
@@ -285,4 +284,65 @@ a img.aligncenter {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*@media Queries*/
+@media (min-width: 1024px) {
+	#site-container {
+		width: 80%;
+	}
+	
+}
+
+
+@media (min-width: 992px) and (max-width: 1023px) {
+	/*tablets in landscape mode and low resolution monitors*/
+	#site-container {
+		width: 80%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	/*tablets in portrait mode*/
+	#site-container {
+		margin: 0;
+		width: 768px;
+		overflow: hidden;
+	}
+	
+	#post-wrapper {
+		width: 73%;
+	}
+}
+
+
+@media (max-width: 767px) {
+	/*smartphones*/
+	#site-title {
+		font-size: 2rem;
+	}
+	
+	#site-description {
+		font-size: 1.5rem;
+	}
+	
+	#site-container {
+		width: 95%;
+	}
+	
+	#post-wrapper {
+		width: 100%;
+	}
+	
+	#site-sidebar {
+		display: none;
+	}
+
+	.post-date, .post-tags {
+		float: left;
+	}
+	
+	.post-date {
+		font-style: italic;
+	}
 }
