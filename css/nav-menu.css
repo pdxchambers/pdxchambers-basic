@@ -121,3 +121,37 @@ ul.sub-menu li.menu-item-has-children span.down-triangle {
 .current_menu_item a:focus {
   color: white;
 }
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  /*tablets in landscape mode and low resolution monitors*/
+}
+@media (min-width: 631px) and (max-width: 991px) {
+  /*tablets in portrait mode*/
+}
+@media (max-width: 630px) {
+  /* line 129, ../scss/nav-menu.scss */
+  #menu {
+    font-size: 1.5rem;
+    font-wieight: bold;
+    width: 36px;
+    height: 36px;
+    background: black;
+    color: white;
+    text-align: center;
+  }
+
+  /* line 139, ../scss/nav-menu.scss */
+  #site-nav {
+    display: none;
+  }
+
+  /* line 143, ../scss/nav-menu.scss */
+  li.menu-item {
+    float: none;
+  }
+
+  /* line 147, ../scss/nav-menu.scss */
+  #site-nav ul > li.menu-item:last-child {
+    float: none;
+  }
+}
