@@ -29,10 +29,6 @@ $sub-menu-hover-link: #000;
     float: left;
  }
  
- #site-nav > ul > li.menu-item:hover {
- 	background: $site-nav-current-item;
- }
- 
  #site-nav ul > li.menu-item:last-child {
    float: right;
  }
@@ -57,18 +53,6 @@ $sub-menu-hover-link: #000;
  
  ul.sub-menu > li.menu-item a {
  	color: $sub-menu-link;
- }
- 
-  li.menu-item-has-children:hover {
-    background: $sub-menu-hover;
-  }
-  
- ul.sub-menu > li.menu-item-has-children:hover > a{
-    color: $sub-menu-hover-link;
-  }
- 
- li.menu-item-has-children:hover > ul.sub-menu {
-   display: block;
  }
  
  ul.sub-menu li.menu-item {

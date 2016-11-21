@@ -21,17 +21,12 @@ li.menu-item {
 }
 
 /* line 32, ../scss/nav-menu.scss */
-#site-nav > ul > li.menu-item:hover {
-  background: red;
-}
-
-/* line 36, ../scss/nav-menu.scss */
 #site-nav ul > li.menu-item:last-child {
   float: right;
 }
 
 /*SUBMENU STYLING*/
-/* line 41, ../scss/nav-menu.scss */
+/* line 37, ../scss/nav-menu.scss */
 ul.sub-menu {
   position: absolute;
   display: none;
@@ -41,45 +36,30 @@ ul.sub-menu {
   z-index: 999;
 }
 
-/* line 49, ../scss/nav-menu.scss */
+/* line 45, ../scss/nav-menu.scss */
 ul.sub-menu > li.menu-item-has-children {
   postition: relative;
 }
 
-/* line 52, ../scss/nav-menu.scss */
+/* line 48, ../scss/nav-menu.scss */
 ul.sub-menu > li.menu-item-has-children > ul {
   position: absolute;
   top: 15px;
   left: 100%;
 }
 
-/* line 58, ../scss/nav-menu.scss */
+/* line 54, ../scss/nav-menu.scss */
 ul.sub-menu > li.menu-item a {
   color: black;
 }
 
-/* line 62, ../scss/nav-menu.scss */
-li.menu-item-has-children:hover {
-  background: #cccccc;
-}
-
-/* line 66, ../scss/nav-menu.scss */
-ul.sub-menu > li.menu-item-has-children:hover > a {
-  color: black;
-}
-
-/* line 70, ../scss/nav-menu.scss */
-li.menu-item-has-children:hover > ul.sub-menu {
-  display: block;
-}
-
-/* line 74, ../scss/nav-menu.scss */
+/* line 58, ../scss/nav-menu.scss */
 ul.sub-menu li.menu-item {
   display: block;
   float: none;
 }
 
-/* line 79, ../scss/nav-menu.scss */
+/* line 63, ../scss/nav-menu.scss */
 .menu-item a {
   display: inline-block;
   text-align: center;
@@ -88,12 +68,12 @@ ul.sub-menu li.menu-item {
   color: white;
 }
 
-/* line 87, ../scss/nav-menu.scss */
+/* line 71, ../scss/nav-menu.scss */
 .menu-item-has-children a {
   padding: 14px 16px 5px 16px;
 }
 
-/* line 91, ../scss/nav-menu.scss */
+/* line 75, ../scss/nav-menu.scss */
 ul > li.menu-item-has-children span.down-triangle {
   width: 0;
   height: 0;
@@ -104,17 +84,17 @@ ul > li.menu-item-has-children span.down-triangle {
   display: block;
 }
 
-/* line 101, ../scss/nav-menu.scss */
+/* line 85, ../scss/nav-menu.scss */
 ul.sub-menu li.menu-item-has-children span.down-triangle {
   border-top: 5px solid black;
 }
 
-/* line 106, ../scss/nav-menu.scss */
+/* line 90, ../scss/nav-menu.scss */
 .current_menu_item {
   background-color: red;
 }
 
-/* line 113, ../scss/nav-menu.scss */
+/* line 97, ../scss/nav-menu.scss */
 .current_menu_item a:link,
 .current_menu_item a:hover,
 .current_menu_item a:visited,
@@ -129,7 +109,7 @@ ul.sub-menu li.menu-item-has-children span.down-triangle {
   /*tablets in portrait mode*/
 }
 @media (max-width: 630px) {
-  /* line 129, ../scss/nav-menu.scss */
+  /* line 113, ../scss/nav-menu.scss */
   #menu {
     font-size: 1.5rem;
     font-wieight: bold;
@@ -140,17 +120,17 @@ ul.sub-menu li.menu-item-has-children span.down-triangle {
     text-align: center;
   }
 
-  /* line 139, ../scss/nav-menu.scss */
+  /* line 123, ../scss/nav-menu.scss */
   #site-nav {
     display: none;
   }
 
-  /* line 143, ../scss/nav-menu.scss */
+  /* line 127, ../scss/nav-menu.scss */
   li.menu-item {
     float: none;
   }
 
-  /* line 147, ../scss/nav-menu.scss */
+  /* line 131, ../scss/nav-menu.scss */
   #site-nav ul > li.menu-item:last-child {
     float: none;
   }
