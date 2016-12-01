@@ -68,7 +68,7 @@ pre, code {
 }
 
 #site-content{
-	width: 100%;
+	max-width: 100%;
 }
 
 #post-wrapper {
@@ -161,8 +161,6 @@ pre, code {
 .comment-list li.even {
 	background: $even-comment-bg;
 }
-
-
 
 /*WORDPRESS GENERATED CLASSES*/
 .sticky {
@@ -289,16 +287,15 @@ a img.aligncenter {
 /*@media Queries*/
 @media (min-width: 1024px) {
 	#site-container {
-		width: 80%;
+		max-width: 1024px;
 	}
 	
 }
 
-
 @media (min-width: 992px) and (max-width: 1023px) {
 	/*tablets in landscape mode and low resolution monitors*/
 	#site-container {
-		width: 80%;
+		max-width: 991px;
 	}
 }
 
@@ -306,7 +303,7 @@ a img.aligncenter {
 	/*tablets in portrait mode*/
 	#site-container {
 		margin: 0;
-		width: 768px;
+		max-width: 768px;
 		overflow: hidden;
 	}
 	
@@ -315,34 +312,27 @@ a img.aligncenter {
 	}
 }
 
-
 @media (max-width: 767px) {
 	/*smartphones*/
-	#site-title {
-		font-size: 2rem;
+	#site-title, .post-header h2 {
+		font-size: 1.25rem;
 	}
 	
-	#site-description {
-		font-size: 1.5rem;
+	#site-description, .author, .post-date,
+	.post-categories, .post-tags {
+		font-size: .75rem;
 	}
 	
-	#site-container {
-		width: 95%;
-	}
-	
-	#post-wrapper {
-		width: 100%;
+	#site-container, .author, .post-date,
+	.post-categories, .post-tags{
+		float: none;
 	}
 	
 	#site-sidebar {
 		display: none;
 	}
-
-	.post-date, .post-tags {
-		float: left;
-	}
 	
-	.post-date {
-		font-style: italic;
+	#post-wrapper {
+		width: 100%;
 	}
 }
