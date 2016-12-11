@@ -374,4 +374,9 @@ a img.aligncenter {
   #post-wrapper {
     width: 100%;
   }
+
+  /* line 339, ../scss/pdxc-basic-styles.scss */
+  li.depth-4 {
+    display: none;
+  }
 }

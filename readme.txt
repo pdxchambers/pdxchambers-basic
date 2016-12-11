@@ -1,6 +1,5 @@
 === PDXChambers Basic ===
 Contributors: pdxchambers
-Donate link: http://example.com/
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, blog 
 Requires at least: 4.6.1
 Tested up to: 4.6.1
@@ -8,11 +7,20 @@ Stable tag: 4.6.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
  
-PDXChambers Basic is a simple, yet highly customizable, blog theme.
+PDXChambers Basic is a simple blog theme.
  
 == Description ==
- PDXChambers Basic is, as the name suggest, a simple blog theme. It supports a wide variety of WordPress customization 
- options allowing extreme flexibility in presentation.
+ PDXChambers Basic is, as the name suggest, a simple blog theme. It supports a variety of WordPress customization 
+ options allowing flexibility in presentation.
+ 
+ ==Design Notes==
+ Some specific design decisions were made in developing this theme.
+ 
+ 1. Top level elements in the site's navigation menu don't go anywhere. This is to accommodate touch devices which don't have a "hover" 
+ function. Tapping (or clicking) the top level element will display the sub-menu items for that element. Tapping it again will hide them.
+ 1. Nested comments are only displayed up to three levels deep for small devices (such as smartphones and small tablets). This was done
+ because at that level the container becomes too small and the contents spill out of their container. These hidden comments will display
+ as expected when the theme is viewed on a device with a width greater than 767 pixels.
 
  
 == Installation ==
@@ -35,6 +43,13 @@ Once the files have been installed, go your your WordPress site's admin panel an
 
 == Screenshots ==
 No screen shots at present time. 
+
+==Licensing==
+This theme is released under the terms set forth in the GNU Public License (GPL) version 3.0 or later. All applicable rights reserved.
+The default header image ("the image") was created and is owned by the theme author (Julien A. Chambers). Permission is granted to use 
+the image within the context of this theme with or without attribution. For purposes of licensing the term "Source Code" as applicable 
+to the image shall be defined as the unedited image as supplied with the theme. Other uses may be permitted under the terms of the 
+GPL 3.0 license.
 
 == Changelog ==
  =1.0=

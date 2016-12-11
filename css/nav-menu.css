@@ -90,15 +90,15 @@ ul.sub-menu li.menu-item-has-children span.down-triangle {
 }
 
 /* line 90, ../scss/nav-menu.scss */
-.current_menu_item {
+.current-menu-item {
   background-color: red;
 }
 
 /* line 97, ../scss/nav-menu.scss */
-.current_menu_item a:link,
-.current_menu_item a:hover,
-.current_menu_item a:visited,
-.current_menu_item a:focus {
+.current-menu-item a:link,
+.current-menu-item a:hover,
+.current-menu-item a:visited,
+.current-menu-item a:focus {
   color: white;
 }
 
