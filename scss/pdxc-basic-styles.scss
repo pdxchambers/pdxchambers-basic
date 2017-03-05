@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 pre, code {
-	word-wrap: break-word;
+	overflow-x: scroll;
 }
 /*SITE LAYOUT CLASSES*/
 #site-header, #site-content, #post-wrapper #site-sidebar, #site-footer {
@@ -114,10 +114,6 @@ pre, code {
 /*POST LAYOUT STYLES*/
 .post-header {
 	
-}
-
-.post-content {
-	overflow: auto;
 }
 
 .byline, .post-meta {
@@ -253,6 +249,23 @@ a img.aligncenter {
     line-height: 17px;
     margin: 0;
     padding: 0 4px 5px;
+}
+
+a.page-numbers, span.current {
+	padding: 5px;
+	font-size: 1.25rem;
+}
+
+a.prev, a.next {
+	background: $odd-comment-bg;
+}
+
+a.prev {
+	float: left;
+}
+
+a.next {
+	float: right;
 }
 
 /* Text meant only for screen readers. */

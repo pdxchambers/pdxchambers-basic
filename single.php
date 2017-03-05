@@ -19,8 +19,8 @@
      	<header class="post-header">
      		<?php
      			if ( has_post_thumbnail() ) {
-	            	the_post_thumbnail();	
-	            } else { 
+	            	the_post_thumbnail();
+	            } else {
 	            	/*placeholder for something to do if no post_thumbnail*/
 	            }//end if/else
 	         ?>
@@ -38,23 +38,22 @@
 	     	<p class="post-tags"><?php the_tags( 'Tagged in: '); ?></p>
      	</div>
      </article>
-     <?php 
+     <?php
      wp_link_pages();
      		} //endwhile
     	} //endif
-    	
+
     	the_posts_pagination( array(
-    			'prev_text'          => __( 'Newer Posts', 'pdxchambers-basic' ),
-    			'next_text'          => __( 'Older Posts', 'pdxchambers-basic' )
+    			'prev_text'          => __( 'Next', 'pdxchambers-basic' ),
+    			'next_text'          => __( 'Prev', 'pdxchambers-basic' )
     	) );
     	if ( comments_open() || get_comments_number() ) {
     		comments_template();
     	}
      ?>
    </div><!-- end Post-Wrapper -->
-   <?php get_sidebar(); ?>  
+   <?php get_sidebar(); ?>
 </div><!-- Site Content -->
-<?php 
+<?php
 	get_footer();
 ?>
-			

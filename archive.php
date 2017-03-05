@@ -16,7 +16,7 @@
 			the_archive_description( '<div class="taxonomy-description">', '</div>' );
 		?>
 		</div>
-	<?php	
+	<?php
     	if(have_posts()){
     		while(have_posts()) {
     			the_post();
@@ -25,8 +25,8 @@
      	<header class="post-header">
      		<?php
      			if ( has_post_thumbnail() ) {
-	            	the_post_thumbnail();	
-	            } else { 
+	            	the_post_thumbnail();
+	            } else {
 	            	/*placeholder for something to do if no post_thumbnail*/
 	            }//end if/else
 	         ?>
@@ -44,13 +44,13 @@
 	     	<p class="post-tags"><?php the_tags( 'Tagged in: '); ?></p>
      	</div>
      </article>
-     <?php 
+     <?php
      		} //endwhile
     	} //endif
-    	
+
     	the_posts_pagination( array(
-    			'prev_text'          => __( 'Newer Posts', 'pdxchambers-basic' ),
-    			'next_text'          => __( 'Older Posts', 'pdxchambers-basic' )
+    			'prev_text'          => __( 'Next', 'pdxchambers-basic' ),
+    			'next_text'          => __( 'Prev', 'pdxchambers-basic' )
     	) );
      ?>
      </div><!-- end Post-Wrapper -->
@@ -59,7 +59,6 @@
      ?>
 </div><!-- Site Content -->
 
-<?php 
+<?php
 	get_footer();
 ?>
-			

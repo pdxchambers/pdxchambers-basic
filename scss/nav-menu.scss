@@ -14,18 +14,18 @@ $sub-menu-hover-link: #000;
 /*NAVIGTION MENU STYLING*/
 
 /*TOP LEVEL MENU STYLING*/
-#site-nav {
+#site-nav, .main-nav {
 	width: 100%;
 	background: $site-nav-bg;
 	overflow: hidden;
 }
-#site-nav ul {
+#site-nav ul, .main-nav ul {
 	margin: 0;
    	padding: 0;
    	list-style-type: none;
 }
 
- li.menu-item {
+ li.menu-item, li.page_item {
     float: left;
  }
  
@@ -34,7 +34,7 @@ $sub-menu-hover-link: #000;
  }
  
  /*SUBMENU STYLING*/
- ul.sub-menu {
+ ul.sub-menu, ul.children {
    position: absolute;
    display: none;
    float: left;
@@ -42,7 +42,7 @@ $sub-menu-hover-link: #000;
    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
    z-index: 999;
  }
- ul.sub-menu > li.menu-item-has-children {
+ ul.sub-menu > li.menu-item-has-children, ul.children > li.page_item {
  	postition: relative;
  }
  ul.sub-menu > li.menu-item-has-children > ul {
@@ -51,7 +51,7 @@ $sub-menu-hover-link: #000;
  	left: 100%;
  }
  
- ul.sub-menu > li.menu-item a {
+ ul.sub-menu > li.menu-item a, ul.children > li.page_item a {
  	color: $sub-menu-link;
  }
  
@@ -60,7 +60,7 @@ $sub-menu-hover-link: #000;
    float: none;
  }
  
- .menu-item a {
+ .menu-item a, .page_item a {
    display: inline-block;
    text-align: center;
    padding: 14px 16px;

@@ -11,6 +11,6 @@
 				<div><p>Theme proudly powered by WordPress and was developed by <a href="http://www.pdxchambers.com">Julien Chambers</a></p></div>	
 			</footer>
 		</div><!-- end site-container -->
+		<?php wp_footer(); ?>
 	</body>
-	<?php wp_footer(); ?>
 </html>

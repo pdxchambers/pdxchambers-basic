@@ -2,21 +2,21 @@
 /*NAVIGTION MENU STYLING*/
 /*TOP LEVEL MENU STYLING*/
 /* line 17, ../scss/nav-menu.scss */
-#site-nav {
+#site-nav, .main-nav {
   width: 100%;
   background: black;
   overflow: hidden;
 }
 
 /* line 22, ../scss/nav-menu.scss */
-#site-nav ul {
+#site-nav ul, .main-nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 /* line 28, ../scss/nav-menu.scss */
-li.menu-item {
+li.menu-item, li.page_item {
   float: left;
 }
 
@@ -27,7 +27,7 @@ li.menu-item {
 
 /*SUBMENU STYLING*/
 /* line 37, ../scss/nav-menu.scss */
-ul.sub-menu {
+ul.sub-menu, ul.children {
   position: absolute;
   display: none;
   float: left;
@@ -37,7 +37,7 @@ ul.sub-menu {
 }
 
 /* line 45, ../scss/nav-menu.scss */
-ul.sub-menu > li.menu-item-has-children {
+ul.sub-menu > li.menu-item-has-children, ul.children > li.page_item {
   postition: relative;
 }
 
@@ -49,7 +49,7 @@ ul.sub-menu > li.menu-item-has-children > ul {
 }
 
 /* line 54, ../scss/nav-menu.scss */
-ul.sub-menu > li.menu-item a {
+ul.sub-menu > li.menu-item a, ul.children > li.page_item a {
   color: black;
 }
 
@@ -60,7 +60,7 @@ ul.sub-menu li.menu-item {
 }
 
 /* line 63, ../scss/nav-menu.scss */
-.menu-item a {
+.menu-item a, .page_item a {
   display: inline-block;
   text-align: center;
   padding: 14px 16px;

@@ -47,19 +47,24 @@ function pdxc_widget_init(){
 /*Add Theme Support for WP Features*/
 function pdxc_add_support() {
 	$header_args = array (
-			'default-image'  => IMAGE_DIRECTORY . 'header/train.png',
-			'width'          => 1024,
-			'height'         => 768,
-			'flex-width'     => true,
-			'flex-height'    => true,
-			'header-text'    => true
+			'default-image'      => IMAGE_DIRECTORY . 'header/train.png',
+			'width'              => 1024,
+			'height'             => 768,
+			'flex-width'         => true,
+			'flex-height'        => true,
+			'header-text'        => true,
+			'default-text-color' => '#000'
+	);
+	
+	$background_args = array (
+		'default-color'         => '#fff'
 	);
 	
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'custom-header', $header_args );
-	add_theme_support( 'custom-background');
+	add_theme_support( 'custom-background', $background_args );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 	
 	

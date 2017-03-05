@@ -1,6 +1,6 @@
 <?php
 /**
- * The page template
+ * The search results template
  *
  * @package WordPress
  * @subpackage pdxchambers-basic
@@ -10,28 +10,32 @@
 ?>
 <div id="site-content">
 	<div id="post-wrapper">
-<?php
+	<?php
     	if(have_posts()){
     		while(have_posts()) {
     			the_post();
     ?>
      <article <?php post_class('post-content'); ?>>
      	<header class="post-header">
-     		<?php
-     			if ( has_post_thumbnail() ) {
-	            	the_post_thumbnail();
-	            } else {
-	            	/*placeholder for something to do if no post_thumbnail*/
-	            }//end if/else
-	         ?>
      		<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<?php if ( 'post' == get_post_type() ) { ?>
+				<div class="byline">
+					<h3 class="author">By <?php the_author() ?></h3>
+					<p class="post-date"><?php the_time( 'l, F jS, Y' ); ?></p>
+				</div>
+			<?php } ?>
      	</header><!-- end post-header -->
      	<section>
-     		<?php the_content(); ?>
+     		<?php the_excerpt(); ?>
      	</section>
+		<?php if ( 'post' == get_post_type() ) { ?>
+     	<div class="post-meta">
+	     	<p class="post-categories">Category: <?php the_category( ', ' ); ?>.</p>
+	     	<p class="post-tags"><?php the_tags( 'Tagged in: '); ?></p>
+     	</div>
+		<?php } ?>
      </article>
      <?php
-     wp_link_pages();
      		} //endwhile
     	} //endif
 
@@ -39,13 +43,13 @@
     			'prev_text'          => __( 'Next', 'pdxchambers-basic' ),
     			'next_text'          => __( 'Prev', 'pdxchambers-basic' )
     	) );
-    	if ( comments_open() || get_comments_number() ) {
-    		comments_template();
-    	}
      ?>
-   </div><!-- end Post-Wrapper -->
-   <?php get_sidebar(); ?>
+     </div><!-- end Post-Wrapper -->
+     <?php
+    	get_sidebar();
+     ?>
 </div><!-- Site Content -->
+
 <?php
 	get_footer();
 ?>
