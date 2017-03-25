@@ -1,29 +1,29 @@
 <?php
-define( 'STYLE_DIRECTORY', get_stylesheet_directory_uri() . '/css/' );
-define( 'IMAGE_DIRECTORY', get_stylesheet_directory_uri() . '/images/' );
-define( 'SCRIPT_DIRECTORY', get_stylesheet_directory_uri() . '/js/' );
+define( 'PDXC_STYLE_DIRECTORY', get_stylesheet_directory_uri() . '/css/' );
+define( 'PDXC_IMAGE_DIRECTORY', get_stylesheet_directory_uri() . '/images/' );
+define( 'PDXC_SCRIPT_DIRECTORY', get_stylesheet_directory_uri() . '/js/' );
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 1024;
+function pdxc_set_content_width() {
+  $GLOBALS[ 'content_width' ] = apply_filters( 'pdxc_set_content_width', 1024 );
 }
-
-add_editor_style( '/css/pdxc-basic-styles.css' );
 
 /*Action filters*/
 
 add_action( 'wp_enqueue_scripts', 'pdxc_enqueue_styles' );
 add_action ('widgets_init', 'pdxc_widget_init');
-add_action( 'init', 'pdxc_register_menu' );
-add_action( 'init', 'pdxc_add_support' );
+add_action( 'after_setup_theme', 'pdxc_register_menu' );
+add_action( 'after_setup_theme', 'pdxc_add_support' );
+add_action( 'after_setup_theme', 'pdxc_set_content_width', 0 );
 
 /*Enqueue Scripts and Styles*/
 
 function pdxc_enqueue_styles() {
-	wp_enqueue_style( 'pdxc-main-style', STYLE_DIRECTORY . 'pdxc-basic-styles.css' );
-	wp_enqueue_style( 'pdxc-layout-style', STYLE_DIRECTORY . 'layout-styles.css' );
-	wp_enqueue_style( 'pdxc-nav-style', STYLE_DIRECTORY . 'nav-menu.css' );
-	wp_enqueue_style( 'pdxc-wp-required', get_stylesheet_directory_uri() . '/style.css');
-	wp_enqueue_script('pdxc-site-nav-script', SCRIPT_DIRECTORY . 'menu.js', array( 'jquery', 'jquery-ui-core' ),'', true );
+	wp_enqueue_style( 'pdxc-main-style', PDXC_STYLE_DIRECTORY . 'pdxc-basic-styles.css' );
+	wp_enqueue_style( 'pdxc-layout-style', PDXC_STYLE_DIRECTORY . 'layout-styles.css' );
+	wp_enqueue_style( 'pdxc-nav-style', PDXC_STYLE_DIRECTORY . 'nav-menu.css' );
+	wp_enqueue_style( 'pdxc-wp-required', get_stylesheet_uri() . '/style.css');
+	wp_enqueue_script('pdxc-site-nav-script', PDXC_SCRIPT_DIRECTORY . 'menu.js', array( 'jquery', 'jquery-ui-core' ),'', true );
+	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 }
 
 /*Register Menus*/
@@ -35,7 +35,7 @@ function pdxc_register_menu() {
 
 function pdxc_widget_init(){
 	register_sidebar ( array(
-			'name' => 'Primary Sidebar',
+			'name' => __('Primary Sidebar', 'pdxchambers-basic'),
 			'id' => 'site-sidebar',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -47,7 +47,7 @@ function pdxc_widget_init(){
 /*Add Theme Support for WP Features*/
 function pdxc_add_support() {
 	$header_args = array (
-			'default-image'      => IMAGE_DIRECTORY . 'header/train.png',
+			'default-image'      => PDXC_IMAGE_DIRECTORY . 'header/train.png',
 			'width'              => 1024,
 			'height'             => 768,
 			'flex-width'         => true,
@@ -55,20 +55,20 @@ function pdxc_add_support() {
 			'header-text'        => true,
 			'default-text-color' => '#000'
 	);
-	
+
 	$background_args = array (
 		'default-color'         => '#fff'
 	);
-	
+
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'custom-header', $header_args );
 	add_theme_support( 'custom-background', $background_args );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
-	
-	
-	
+
+	add_editor_style( '/css/pdxc-basic-styles.css' );
+
 	register_default_headers( array(
 		'train' => array(
 			'url'           => '%s/images/header/train.png',
@@ -80,10 +80,10 @@ function pdxc_add_support() {
 }
 
 function pdxc_add_inline_styles() {
-	$image = get_header_image();
+	$image = esc_url( get_header_image() );
 	$custom_css = "
 	#site-header{
-		background: url( $image );
+		background: url( $image ) ;
 	}";
 	wp_add_inline_style( 'pdxc-main-style', $custom_css );
 }

@@ -2,7 +2,6 @@
 /**
  * The comment template
  *
- * @package WordPress
  * @subpackage pdxchambers-basic
  * @since PDXChambers Basic 1.0
  */
@@ -16,7 +15,7 @@ if (post_password_required() ) {
     <?php
         printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'pdxchambers-basic' ),
             number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-    ?> 
+    ?>
 	</h2>
 	<ol class="comment-list">
 	    <?php
@@ -40,6 +39,6 @@ if (post_password_required() ) {
 	<p class="no-comments"><?php _e( 'Comments are closed.' , 'pdxchambers-basic' ); ?></p>
 	<?php endif; ?>
 <?php } //end have_comments
-	comment_form();	
+	comment_form();
 ?>
 </div><!-- end comments-wrapper -->

@@ -39,19 +39,71 @@ The simplest way to install the theme is to do the following:
 1. Log onto your WordPress site using FTP.
 1. Upload the extracted folder to your wp-content/themes directory.
 
-Once the files have been installed, go your your WordPress site's admin panel and activate it under "Apperance" -> "Themes" 
+Once the files have been installed, go your your WordPress site's 
+admin panel and activate it under "Apperance" -> "Themes" 
 
 == Screenshots ==
 No screen shots at present time. 
 
 ==Licensing==
-This theme is released under the terms set forth in the GNU Public License (GPL) version 3.0 or later. All applicable rights reserved.
-The default header image ("the image") was created and is owned by the theme author (Julien A. Chambers). Permission is granted to use 
-the image within the context of this theme with or without attribution. For purposes of licensing the term "Source Code" as applicable 
-to the image shall be defined as the unedited image as supplied with the theme. Other uses may be permitted under the terms of the 
-GPL 3.0 license.
+PDXChambers Basic, Copyright 2017 Julien Chambers. PDXChambers Basic 
+is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see < http://www.gnu.org/licenses/ >.
+
+The following third-party resources are bundled with PDXChambers Basic:
+
+Header image train.jpg and train_thumbnail.png, Copyright 2016 Julien A. Chambers License: CC0 1.0 Universal (CC0 1.0) https://www.gnu.org/licenses/license-list.html#CC0
 
 == Changelog ==
+=1.0.2=
+Fixed the following issues:
+
+-In functions.php
+--provided unique prefix for global constants
+--set $content_width as a global
+--wrapped add_editor_style() in a function and hooked into after_setup_theme instead if init
+--changed get_stylesheet_directory_uri() to get_stylesheet_uri() when enqueueing style.css
+--added support for translation
+--escaped the URL for the header image
+
+-In footer.php
+--added support for translation
+
+-Removed @package wordpress from all templates
+
+-in header.php
+--wrapped comment-reply in a function and hooked to wp_enqueue_scripts()
+--replaced the echo with just bloginfo('description')
+
+-fixed the_time() in index.php and search.php to respect user time settings
+
+-Added translation support in search.php, index.php, and single.php
+
+-removed exe file that somehow made its way into the images folder
+
+-fixed licensing information in readme.txt
+
+=1.0.1=
+Fixed the following issues:
+-Default menu did not display with any styles applied
+-Removed author, date, and empty category from static pages
+-Enlarged post navigation links to make navigation on mobile devices easier
+-Fixed search.php so author, date, and empty category is not displayed for pages in search results
+-Moved wp_footer() to correct location
+-Added overflow-x to CSS so <pre> tags scroll if the text overflows the element
+-Fixed default color issue in the customizer
  =1.0=
  Initial version.
 

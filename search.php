@@ -2,7 +2,6 @@
 /**
  * The search results template
  *
- * @package WordPress
  * @subpackage pdxchambers-basic
  * @since PDXChambers Basic 1.0
  */
@@ -20,8 +19,8 @@
      		<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			<?php if ( 'post' == get_post_type() ) { ?>
 				<div class="byline">
-					<h3 class="author">By <?php the_author() ?></h3>
-					<p class="post-date"><?php the_time( 'l, F jS, Y' ); ?></p>
+					<h3 class="author"><?php echo __( 'By', 'pdxchambers-basic' ); the_author(); ?></h3>
+					<p class="post-date"><?php the_time(); ?></p>
 				</div>
 			<?php } ?>
      	</header><!-- end post-header -->
@@ -30,7 +29,7 @@
      	</section>
 		<?php if ( 'post' == get_post_type() ) { ?>
      	<div class="post-meta">
-	     	<p class="post-categories">Category: <?php the_category( ', ' ); ?>.</p>
+	     	<p class="post-categories"><?php echo __( 'Category', 'pdxchambers-basic')?>: <?php the_category( ', ' ); ?>.</p>
 	     	<p class="post-tags"><?php the_tags( 'Tagged in: '); ?></p>
      	</div>
 		<?php } ?>

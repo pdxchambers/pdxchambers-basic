@@ -2,7 +2,6 @@
 /**
  * The 404 Error template
  *
- * @package WordPress
  * @subpackage pdxchambers-basic
  * @since PDXChambers Basic 1.0
  */
@@ -17,7 +16,7 @@
 		</div>
      </div><!-- end Post-Wrapper -->
 </div><!-- Site Content -->
-<?php 
+<?php
 	get_footer();
 ?>
-			
+

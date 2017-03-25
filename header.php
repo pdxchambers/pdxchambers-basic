@@ -1,8 +1,7 @@
-<?php 
+<?php
 /**
  * The header template
  *
- * @package WordPress
  * @subpackage pdxchambers-basic
  * @since PDXChambers Basic 1.0
  */
@@ -16,7 +15,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+
 		<?php wp_head(); ?>
 	</head>
 	<body id="bodyTag" <?php body_class(); ?>>
@@ -24,9 +23,9 @@
 			<header id="site-header">
 				<div id="title-bg">
 					<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 id="site-description"><?php echo get_bloginfo( 'description' ); ?></h2>
+					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div>
-			<?php 
+			<?php
 				/*Main Site Navigation*/
 				wp_nav_menu( array(
 					'container' 	 => 'nav',
@@ -36,4 +35,4 @@
 				) );
 			?>
 			</header>
-			
+

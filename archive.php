@@ -2,7 +2,6 @@
 /**
  * The archive template
  *
- * @package WordPress
  * @subpackage pdxchambers-basic
  * @since PDXChambers Basic 1.0
  */
