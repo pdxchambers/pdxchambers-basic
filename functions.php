@@ -3,8 +3,12 @@ define( 'PDXC_STYLE_DIRECTORY', get_stylesheet_directory_uri() . '/css/' );
 define( 'PDXC_IMAGE_DIRECTORY', get_stylesheet_directory_uri() . '/images/' );
 define( 'PDXC_SCRIPT_DIRECTORY', get_stylesheet_directory_uri() . '/js/' );
 
-function pdxc_set_content_width() {
-  $GLOBALS[ 'content_width' ] = apply_filters( 'pdxc_set_content_width', 1024 );
+
+function pdxc_content_width() {
+  if (! isset( $content_width ) ) {
+    $content_width = 640;
+  }
+  $GLOBALS[ 'content_width' ] = apply_filters( 'pdxc_content_width', 640 );
 }
 
 /*Action filters*/
@@ -13,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'pdxc_enqueue_styles' );
 add_action ('widgets_init', 'pdxc_widget_init');
 add_action( 'after_setup_theme', 'pdxc_register_menu' );
 add_action( 'after_setup_theme', 'pdxc_add_support' );
-add_action( 'after_setup_theme', 'pdxc_set_content_width', 0 );
+add_action( 'after_setup_theme', 'pdxc_content_width', 0 );
 
 /*Enqueue Scripts and Styles*/
 
